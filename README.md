@@ -1,71 +1,42 @@
-# t-reader README
+# Thief Reader
 
-This is the README for your extension "t-reader". After writing up a brief description, we recommend including the following sections.
+一个vscode在线看小说摸鱼神器
 
-## Features
+![](./images/demo.jpg)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 安装
 
-For example if there is an image subfolder under your extension project workspace:
+- todo
 
-\!\[feature X\]\(images/feature-x.png\)
+## 快捷键
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+**MAC**
 
-## Requirements
+`Cmd+M` 老板键/初始化键。 显示done ，随时可用
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+`Cmd+;` 恢复小说内容。 文本聚焦(编辑代码)的时候，才可以使用
 
-## Extension Settings
+`Cmd+,` 上一页。 文本聚焦(编辑代码)的时候，才可以使用
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+`Cmd+.` 下一页。 文本聚焦(编辑代码)的时候，才可以使用
 
-For example:
+`Shift+Cmd+,` 上一章。 文本聚焦(编辑代码)的时候，才可以使用
 
-This extension contributes the following settings:
+`Shift+Cmd+.` 下一章。 文本聚焦(编辑代码)的时候，才可以使用
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
+**WIN**
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+`Ctrl+ALT+M` 老板键/初始化键 。 显示done ，随时可用
 
-## Release Notes
+`Ctrl+Alt+;` 恢复小说内容。 文本聚焦(编辑代码)的时候，才可以使用
 
-Users appreciate release notes as you update your extension.
+`Ctrl+Alt+,` 上一页 。 文本聚焦(编辑代码)的时候，才可以使用
 
-### 1.0.0
+`Ctrl+Alt+.` 下一页 。 文本聚焦(编辑代码)的时候，才可以使用
 
-Initial release of ...
+`Shift+Shift+Alt+,` 上一章。 文本聚焦(编辑代码)的时候，才可以使用
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+`Shift+Shift+Alt+.` 下一章。 文本聚焦(编辑代码)的时候，才可以使用
 
 **Enjoy!**

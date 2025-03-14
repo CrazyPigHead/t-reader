@@ -1,21 +1,141 @@
 {
   "name": "t-reader",
   "displayName": "t-reader",
-  "description": "xiaoshuo",
-  "version": "0.0.1",
+  "description": "Looking book tools",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.98.0"
   },
   "categories": [
     "Other"
   ],
+  "author": "疯狂猪头头<huizhong.zu@qq.com>",
+  "license": "GPL3",
+  "homepage": "https://github.com/CrazyPigHead/t-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrazyPigHead/t-reader"
+  },
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "t-reader",
+      "type": "object",
+      "properties": {
+        "tReader.currChapterNumber": {
+          "type": "number",
+          "default": 1,
+          "description": "当前小说章节(支持跳转) & Chapter of Current Novels (Support jumping)",
+          "order": 1
+        },
+        "tReader.currPageNumber": {
+          "type": "number",
+          "default": 1,
+          "description": "当前小说页数(支持跳转) & Pages of Current Novels (Support jumping)",
+          "order": 2
+        },
+        "tReader.pageSize": {
+          "type": "number",
+          "default": 50,
+          "description": "每页文字数量 & Number of text per page",
+          "order": 3
+        },
+        "tReader.lineBreak": {
+          "type": "string",
+          "default": " ",
+          "description": "换行分隔符号，默认一个空格 & Line Break Separation Symbol,Default a space",
+          "order": 4
+        },
+        "tReader.isEnglish": {
+          "type": "boolean",
+          "default": false,
+          "description": "是否为英文书籍？ & Is it an English book？",
+          "order": 5
+        },
+        "tReader.proxy": {
+          "type": "string",
+          "default": "",
+          "description": "proxy",
+          "order": 6
+        },
+        "tReader.chapterUrl": {
+          "type": "string",
+          "default": "",
+          "description": "小说目录地址",
+          "order": 7
+        }
+      }
+    },
     "commands": [
       {
-        "command": "t-reader.helloWorld",
-        "title": "Hello World"
+        "command": "extension.displayCode",
+        "title": "t-reader.DisplayCode"
+      },
+      {
+        "command": "extension.displayBook",
+        "title": "t-reader.DisplayBook"
+      },
+      {
+        "command": "extension.getPreviousPage",
+        "title": "t-reader.PreviousPage"
+      },
+      {
+        "command": "extension.getNextPage",
+        "title": "t-reader.NextPage"
+      },
+      {
+        "command": "extension.getJumpingPage",
+        "title": "t-reader.JumpingPage"
+      },
+      {
+        "command": "extension.getPreviousChapter",
+        "title": "t-reader.PreviousChapter"
+      },
+      {
+        "command": "extension.getNextChapter",
+        "title": "t-reader.NextChapter"
+      },
+      {
+        "command": "extension.getJumpingChapter",
+        "title": "t-reader.JumpingChapter"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.getPreviousPage",
+        "key": "ctrl+alt+,",
+        "mac": "cmd+,",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.getNextPage",
+        "key": "ctrl+alt+.",
+        "mac": "cmd+.",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.getPreviousChapter",
+        "key": "shift+ctrl+alt+,",
+        "mac": "shift+cmd+,",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.getNextChapter",
+        "key": "shift+ctrl+alt+.",
+        "mac": "shift+cmd+.",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.displayCode",
+        "key": "ctrl+alt+m",
+        "mac": "cmd+m"
+      },
+      {
+        "command": "extension.displayBook",
+        "key": "ctrl+alt+;",
+        "mac": "cmd+;",
+        "when": "editorTextFocus"
       }
     ]
   },
@@ -31,17 +151,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.98.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/vscode": "^1.98.0",
     "@typescript-eslint/eslint-plugin": "^8.25.0",
     "@typescript-eslint/parser": "^8.25.0",
-    "eslint": "^9.21.0",
-    "typescript": "^5.7.3",
-    "ts-loader": "^9.5.2",
-    "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.21.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
   }
 }
